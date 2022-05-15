@@ -1,0 +1,5 @@
+{%extends "base.html" %} {% block title %}Snack | {{snack.name}} {% endblock title%} {%block content%} {% for snack in snacks_list%}
+
+<p><a href="{% url 'snack_detail' pk=snack.pk %}">{{ snack.name }} - {{ snack.description }} </a></p>
+
+{% endfor %} {% endblock content%} {% comment %} <a href="{% url 'snack_detail' pk=snack.pk %}"> </a><{% endcomment %}
